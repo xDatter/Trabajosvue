@@ -1,0 +1,102 @@
+*{
+    font-size: 20px;
+}
+body{
+    background: url(https://images.wallpaperscraft.com/image/note_motivation_text_words_119310_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: fixed center center ;
+}
+.contenedorFlex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap ;
+}
+
+.itemFlex{
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+
+}
+
+.buscador{
+    width: 100%;
+    height: 8vh;
+    margin: auto;
+    }
+
+.buscador input{
+    width: 80%;
+
+}
+.cien{
+    min-width: 100%;
+}
+.setentaycinco{
+    max-width: 75%;
+}
+.cincuenta{
+    max-width: 55%;
+
+}
+.displayEjercicio{
+    position: absolute;
+    top: 9vh;
+    background: #22222220;
+    border-radius: 20px;
+    width: 95vw;
+    height: 90vh;
+    padding: 20px;
+    border: rgba(206, 1, 69, 0.9) 10px ridge;
+
+}
+
+.bancoSaldo{
+    height: 20%;
+}
+
+.cuentaBanco{
+    height: 100%;
+
+}
+.bancoIzquierda{
+    flex-basis: 45%;
+    height: 100%;
+    background: #ffffff80;
+    margin: 5px;
+}
+.bancoIzquierda p{
+    
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 40vw;
+    text-align: justify;
+    font-size: 25px;
+    margin: auto;
+}
+
+.bancoDerecha{
+    flex-basis: 45%;
+    height: 100%;
+    background: #ffffff80;
+    margin: 5px;
+
+}
+
+
+.bancoControles button{
+    margin: 30px;
+}
+.bancoTabla{
+    align-content: start;
+    justify-content: left;
+    padding: 10px;
+
+}
+.bancoTabla div{
+    min-width: 23%;
+    text-align: left;
+}

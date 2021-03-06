@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando con vue</title>
+    <link rel="stylesheet" href="hoy.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="hoy.js"></script>
+
+</head>
+<body>
+    <div class="contenedorPrincipal contenedorFlex" id="contenedorPrincipal">
+        <div class="itemFlex contenedorFlex buscador">
+            <input v-model="Exponer" type="range" max="6" min="0" value="1">
+        </div>
+        <div class="displayEjercicio" v-show="Exponer==1" id="ejercicio15">
+            <div class="cuentaBanco contenedorFlex">
+                <div class="bancoIzquierda contenedorFlex itemFlex">
+                    <div class="bancoSaldo itemFlex">
+                        <p v-show="bancoSaldo==(-bancoCredito)" >Advertencia, ha alcanzado el cupo máximo de su crédito. Su giro se limitó a $ {{bancoRegMonto[bancoRegMonto.length-1]}}</p>
+                        <p v-show="bancoSaldo<0 & bancoSaldo>(-bancoCredito)" >Recuerda mantener al día tus cuentas, nuestras cajas están disponibles de lunes a domingo :D</p>
+                        <p v-show="bancoSaldo>=1000" >Nuestros clientes son nuestra prioridad, abre tu cuenta de vivienda hoy mismo!</p>
+                        <p v-show="bancoSaldo>=0 & bancoSaldo<1000" >Servicios las 24 horas!</p>
+                        <h2>Su saldo actual es:</h2>
+                        <h1>$ {{bancoSaldo}}</h1>
+                    </div>
+                    <div class="bancoControles cincuenta itemFlex">
+                        <input v-model="bancoOperar" class="cien" type="number" placeholder="Ingrese monto a operar">
+                        <button @click="abonar" >Abonar</button>
+                        <button @click="girar" >Girar</button>
+                        </div>
+
+                </div>
+                <div class="bancoDerecha itemFlex">
+                    <div class="contenedorFlex bancoMovs">
+                        <div  class="cien contenedorFlex bancoTabla">
+                            <div> <b> Fecha <hr> </b></div>
+                            <div> <b> Hora <hr> </b></div>
+                            <div> <b> Movimiento <hr> </b></div>
+                            <div> <b> Monto <hr> </b></div>
+                            <br>
+                        </div>
+                        <div v-for="(item,r) in bancoRegMov" class="cien contenedorFlex bancoTabla">
+                            <div>{{bancoRegFecha[r]}}</div>
+                            <div>{{bancoRegHora[r]}}</div>
+                            <div>{{bancoRegMov[r]}}</div>
+                            <div>{{bancoRegMonto[r]}}</div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="displayEjercicio" v-show="Exponer==2" id="ejercicio16">
+            
+        </div>
+
+        <div class="displayEjercicio" v-show="Exponer==3" id="ejercicio17">
+            
+        </div>
+
+        <div class="displayEjercicio" v-show="Exponer==4" id="ejercicio18">
+            
+        </div>
+
+        <div class="displayEjercicio" v-show="Exponer==5" id="ejercicio19">
+            
+        </div>
+
+        <div class="displayEjercicio" v-show="Exponer==6" id="ejercicio20">
+            
+        </div>
+        
+        
+        
+
+
+
+
+
+    </div>
+
+    <script>
+        Vue.createApp(vueBasico).mount("#contenedorPrincipal");
+    </script>
+</body>
+</html>
