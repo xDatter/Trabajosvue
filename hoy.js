@@ -7,6 +7,7 @@ let vueBasico={
             bancoSaldo:0,
             bancoCredito:1000,
             bancoOperar:"",
+            bancoDisable:false,
             bancoRegFecha:[],
             bancoRegHora:[],
             bancoRegMov:[],
@@ -44,21 +45,23 @@ let vueBasico={
         this.bancoSaldo+=this.bancoOperar;
         this.bancoOperar="";
 
+        if (this.bancoDisable==true){
+            this.bancoDisable=false
+        }
+
        },
 
        girar(){
 
         this.bancoOperar=Number(this.bancoOperar);
 
+        if((this.bancoSaldo-this.bancoOperar)<=(-this.bancoCredito)){
+            this.bancoOperar=(this.bancoCredito+this.bancoSaldo);
+            this.bancoDisable=true;
+        }
         if(this.bancoOperar<=0){
-            alert("Monto a girar debe ser superior a $0");
             this.bancoOperar="";
             return;
-        }
-        if((this.bancoSaldo-this.bancoOperar)<=(-this.bancoCredito)){
-            
-
-            this.bancoOperar=(this.bancoCredito+this.bancoSaldo);
         }
 
         let hoy=new Date();

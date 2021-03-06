@@ -19,18 +19,18 @@
         <div class="displayEjercicio" v-show="Exponer==1" id="ejercicio15">
             <div class="cuentaBanco contenedorFlex">
                 <div class="bancoIzquierda contenedorFlex itemFlex">
+                    <p v-show="bancoSaldo==(-bancoCredito)" >Advertencia, ha alcanzado el cupo máximo de su crédito. Su giro se limitó a $ {{bancoRegMonto[bancoRegMonto.length-1]}}</p>
+                    <p v-show="bancoSaldo<0 & bancoSaldo>(-bancoCredito)" >Recuerda mantener al día tus cuentas, nuestras cajas están disponibles de lunes a domingo :D</p>
+                    <p v-show="bancoSaldo>=1000" >Nuestros clientes son nuestra prioridad, abre tu cuenta de vivienda hoy mismo!</p>
+                    <p v-show="bancoSaldo>=0 & bancoSaldo<1000" >Servicios las 24 horas!</p>
                     <div class="bancoSaldo itemFlex">
-                        <p v-show="bancoSaldo==(-bancoCredito)" >Advertencia, ha alcanzado el cupo máximo de su crédito. Su giro se limitó a $ {{bancoRegMonto[bancoRegMonto.length-1]}}</p>
-                        <p v-show="bancoSaldo<0 & bancoSaldo>(-bancoCredito)" >Recuerda mantener al día tus cuentas, nuestras cajas están disponibles de lunes a domingo :D</p>
-                        <p v-show="bancoSaldo>=1000" >Nuestros clientes son nuestra prioridad, abre tu cuenta de vivienda hoy mismo!</p>
-                        <p v-show="bancoSaldo>=0 & bancoSaldo<1000" >Servicios las 24 horas!</p>
                         <h2>Su saldo actual es:</h2>
                         <h1>$ {{bancoSaldo}}</h1>
                     </div>
                     <div class="bancoControles cincuenta itemFlex">
                         <input v-model="bancoOperar" class="cien" type="number" placeholder="Ingrese monto a operar">
                         <button @click="abonar" >Abonar</button>
-                        <button @click="girar" >Girar</button>
+                        <button @click="girar" :disabled="bancoDisable">Girar</button>
                         </div>
 
                 </div>
