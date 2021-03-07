@@ -18,7 +18,6 @@ body{
     text-align: center;
     flex-grow: 1;
     width: 100%;
-
 }
 
 .buscador{
@@ -69,10 +68,8 @@ body{
 .bancoSaldo{
     height: 20%;
 }
-
-.cuentaBanco{
-    height: 100%;
-
+.contenedorEjer{
+    height: 100%;  
 }
 .bancoIzquierda{
     flex-basis: 45%;
@@ -80,23 +77,22 @@ body{
     background: #ffffff99;
     margin: 5px;
 }
-.bancoIzquierda p{
-    
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 40vw;
-    text-align: center;
-    font-size: 25px;
-    margin: auto;
-}
 
+.bancoCajaMensajes p{
+    border-radius: 100px 400px;
+    position: relative;
+    width: 40vw;
+    min-height: 20vh;
+    text-align: start;
+    font-size: 25px;
+    margin: 30px auto;
+    padding:10px 100px 10px 10px;
+}
 .bancoDerecha{
     flex-basis: 45%;
     height: 100%;
     background: #ffffff99;
     margin: 5px;
-
 }
 
 
@@ -113,3 +109,25 @@ body{
     min-width: 23%;
     text-align: left;
 }
+
+
+
+
+
+/* Estilos en clases para agregar like boostrap */
+
+.bgRo{
+    background: linear-gradient(to right, #ff000055 , #ff000000) ; 
+}
+.bgAm{
+    background: linear-gradient(to right, #ffff0055 , #ff000000) ; 
+}
+.bgAz{
+    background: linear-gradient(to right, #0000ff55 , #ff000000) ; 
+}
+.bgVe{
+    background: linear-gradient(to right, #00ff5555 , #ff000000) ; 
+}
+
+
+

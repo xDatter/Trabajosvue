@@ -7,7 +7,6 @@ let vueBasico={
             bancoSaldo:0,
             bancoCredito:1000,
             bancoOperar:"",
-            bancoDisable:false,
             bancoRegFecha:[],
             bancoRegHora:[],
             bancoRegMov:[],
@@ -18,7 +17,6 @@ let vueBasico={
     methods:{
 
        abonar(){
-           
         this.bancoOperar=Number(this.bancoOperar);
         if(this.bancoOperar<=0){
             alert("Monto a abonar debe ser superior a $0");
@@ -30,12 +28,7 @@ let vueBasico={
             this.bancoOperar="";
             return;
         }
-        let hoy=new Date();
-        let year= hoy.getFullYear();
-        let month= hoy.getMonth();
-        let day= hoy.getDay();
-        let hours=hoy.getHours();
-        let minutes=hoy.getMinutes();
+        let hoy=new Date();let year= hoy.getFullYear();let month= hoy.getMonth();let day= hoy.getDay();let hours=hoy.getHours();let minutes=hoy.getMinutes();
         let fechaMov= `${year}/${month}/${day}`
         let horaMov=`${hours}:${minutes}`
         this.bancoRegMov.push("Abono");
@@ -44,32 +37,18 @@ let vueBasico={
         this.bancoRegHora.push(horaMov);
         this.bancoSaldo+=this.bancoOperar;
         this.bancoOperar="";
-
-        if (this.bancoDisable==true){
-            this.bancoDisable=false
-        }
-
        },
 
        girar(){
-
         this.bancoOperar=Number(this.bancoOperar);
-
         if((this.bancoSaldo-this.bancoOperar)<=(-this.bancoCredito)){
             this.bancoOperar=(this.bancoCredito+this.bancoSaldo);
-            this.bancoDisable=true;
         }
         if(this.bancoOperar<=0){
             this.bancoOperar="";
             return;
         }
-
-        let hoy=new Date();
-        let year= hoy.getFullYear();
-        let month= hoy.getMonth();
-        let day= hoy.getDay();
-        let hours=hoy.getHours();
-        let minutes=hoy.getMinutes();
+        let hoy=new Date();let year= hoy.getFullYear();let month= hoy.getMonth();let day= hoy.getDay();let hours=hoy.getHours();let minutes=hoy.getMinutes();
         let fechaMov= `${year}/${month}/${day}`
         let horaMov=`${hours}:${minutes}`
         this.bancoRegMov.push("Giro");
@@ -78,9 +57,24 @@ let vueBasico={
         this.bancoRegHora.push(horaMov);
         this.bancoSaldo-=this.bancoOperar;
         this.bancoOperar="";
-
-
        },
+
+    },
+    computed:{
+        btnDisable(){
+            return this.bancoSaldo<=(-this.bancoCredito)? true:false;       
+        },
+
+        bancoMensajeColor1(){
+            return this.bancoSaldo<=(-this.bancoCredito)? "bgRo":"bgAz";  
+        },
+
+        bancoMensajeColor2(){
+            return this.bancoSaldo>=-1000 & this.bancoSaldo<-500? "bgAm":"bgAz";  
+        },
+        bancoMensajeColor3(){
+            return this.bancoSaldo>=0 & this.bancoSaldo<500? "bgAz":"bgVe";  
+        }
 
 
 

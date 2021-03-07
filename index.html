@@ -17,20 +17,22 @@
             <input v-model="Exponer" type="range" max="6" min="0" value="1">
         </div>
         <div class="displayEjercicio" v-show="Exponer==1" id="ejercicio15">
-            <div class="cuentaBanco contenedorFlex">
+            <div class="contenedorEjer contenedorFlex ">
                 <div class="bancoIzquierda contenedorFlex itemFlex">
-                    <p v-show="bancoSaldo==(-bancoCredito)" >Advertencia, ha alcanzado el cupo máximo de su crédito. Su giro se limitó a $ {{bancoRegMonto[bancoRegMonto.length-1]}}</p>
-                    <p v-show="bancoSaldo<0 & bancoSaldo>(-bancoCredito)" >Recuerda mantener al día tus cuentas, nuestras cajas están disponibles de lunes a domingo :D</p>
-                    <p v-show="bancoSaldo>=1000" >Nuestros clientes son nuestra prioridad, abre tu cuenta de vivienda hoy mismo!</p>
-                    <p v-show="bancoSaldo>=0 & bancoSaldo<1000" >Servicios las 24 horas!</p>
-                    <div class="bancoSaldo itemFlex">
+                    <div class="bancoCajaMensajes contenedorFlex">
+                        <p class="itemFlex" :class="bancoMensajeColor1" v-show="bancoSaldo==(-bancoCredito)" >Advertencia, ha alcanzado el cupo máximo de su crédito. Su giro se limitó a $ {{bancoRegMonto[bancoRegMonto.length-1]}}</p>
+                        <p class="itemFlex" :class="bancoMensajeColor2" v-show="bancoSaldo<0 & bancoSaldo>(-bancoCredito)" >Recuerda mantener al día tus cuentas, nuestras cajas están disponibles de lunes a domingo :D</p>
+                        <p class="itemFlex" :class="bancoMensajeColor3" v-show="bancoSaldo>=1000" >Nuestros clientes son nuestra prioridad, abre tu cuenta de vivienda hoy mismo!</p>
+                        <p class="itemFlex" :class="bancoMensajeColor3" v-show="bancoSaldo>=0 & bancoSaldo<1000" >Servicios las 24 horas!</p>
+                    </div>
+                    <div class="bancoSaldo itemFlex ">
                         <h2>Su saldo actual es:</h2>
                         <h1>$ {{bancoSaldo}}</h1>
                     </div>
                     <div class="bancoControles cincuenta itemFlex">
                         <input v-model="bancoOperar" class="cien" type="number" placeholder="Ingrese monto a operar">
                         <button @click="abonar" >Abonar</button>
-                        <button @click="girar" :disabled="bancoDisable">Girar</button>
+                        <button @click="girar" :disabled="btnDisable">Girar</button>
                         </div>
 
                 </div>
@@ -57,23 +59,33 @@
         </div>
 
         <div class="displayEjercicio" v-show="Exponer==2" id="ejercicio16">
-            
+            <div class="contenedorEjer contenedorFlex ">
+
+            </div>
         </div>
 
         <div class="displayEjercicio" v-show="Exponer==3" id="ejercicio17">
-            
+            <div class="contenedorEjer contenedorFlex ">
+
+            </div>
         </div>
 
         <div class="displayEjercicio" v-show="Exponer==4" id="ejercicio18">
-            
+            <div class="contenedorEjer contenedorFlex ">
+
+            </div>
         </div>
 
         <div class="displayEjercicio" v-show="Exponer==5" id="ejercicio19">
-            
+            <div class="contenedorEjer contenedorFlex ">
+
+            </div>
         </div>
 
         <div class="displayEjercicio" v-show="Exponer==6" id="ejercicio20">
-            
+            <div class="contenedorEjer contenedorFlex ">
+
+            </div>
         </div>
         
         
