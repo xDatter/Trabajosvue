@@ -28,7 +28,6 @@ body{
 
 .buscador input{
     width: 80%;
-
 }
 .cien{
     min-width: 100%;
@@ -37,8 +36,7 @@ body{
     max-width: 75%;
 }
 .cincuenta{
-    max-width: 55%;
-
+    max-width: 50%;
 }
 .displayEjercicio{
     position: absolute;
@@ -48,28 +46,31 @@ body{
     width: 95vw;
     height: 90vh;
     padding: 20px;
-    border: double 5px;
-    animation: marcohue 10s linear infinite;
-    
-}
-@keyframes marcohue{
-    0%{
-        border-color:   #f66 #fa0  ;    
-    } 
-        
-    50%{        
-        border-color:   #fa0 #f66;    
-    }
-    100%{
-        border-color:   #f66 #fa0  ;    
-    }
-    }
-
-.bancoSaldo{
-    height: 20%;
+    border: solid 3px;
+    animation: marcohue 10s linear infinite;  
 }
 .contenedorEjer{
     height: 100%;  
+}
+@keyframes marcohue{
+    0%{
+        border-color:   #f66 #fa0 #ffaa0066 #fa0 ;    
+    } 
+        
+    33%{        
+        border-color:   #ffaa0066  #f66 #fa0 #f66;    
+    }
+    67%{        
+        border-color:   #fa0  #ffaa0066 #f66 #ffaa0066;    
+    }
+    100%{
+        border-color:   #f66 #fa0 #ffaa0066 #fa0  ;    
+    }
+}
+/* -----------------------Ejercicio 15 cuenta de banco */
+.bancoSaldo{
+    height: 20%;
+    margin-bottom: 50px;
 }
 .bancoIzquierda{
     flex-basis: 45%;
@@ -94,8 +95,6 @@ body{
     background: #ffffff99;
     margin: 5px;
 }
-
-
 .bancoControles button{
     margin: 30px;
 }
@@ -103,19 +102,74 @@ body{
     align-content: start;
     justify-content: left;
     padding: 10px;
-
 }
 .bancoTabla div{
     min-width: 23%;
     text-align: left;
 }
+/* -----------------------Ejercicio 16 calculador */
+.calculadorPrincipal{
+    background: linear-gradient(45deg,#351e01a9, transparent, #000000bb);
+    height: 100%;
+    width: 95%;
+    border-radius: 100px 1px;
+    padding: 20px 100px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.calculadorPerse{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    min-height: 80%;
+    width: 80%;
+    background: transparent;
+    border-radius: 10px;
+}
+.calculadorVisor{
+    order: 1;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border-radius: 50px;
+    border-bottom: #22222200 5px solid ;
+    border-top: #999 1px solid ;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto 20px;
+    font-size: 1.5em;
+    background: linear-gradient(to bottom, #000000aa, #00000033 80%, transparent);
+    /* outline: solid red 1px; */
+}
+.calculadorcontroles{
+    opacity: 90%;
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    min-height: 30%;
+    width: 90%;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+.calculadorcontroles input{
+    font-size: 1.5em;
+}
+.calculadorbtn{
+    flex-basis:25%;
+    margin: 20px auto;
+}
 
 
 
 
 
-/* Estilos en clases para agregar like boostrap */
 
+
+
+/* -----------Estilos en clases para agregar like boostrap */
 .bgRo{
     background: linear-gradient(to right, #ff000055 , #ff000000) ; 
 }

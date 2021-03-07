@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practicando con vue en github</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="hoy.css">
     <link rel="stylesheet" href="normalize.css">
     <script src="https://unpkg.com/vue@next"></script>
@@ -13,9 +15,13 @@
 </head>
 <body>
     <div class="contenedorPrincipal contenedorFlex" id="contenedorPrincipal">
+    <!-- inicio de seccion buscador y ejercicios -->
+
         <div class="itemFlex contenedorFlex buscador">
             <input v-model="Exponer" type="range" max="6" min="0" value="1">
         </div>
+
+    <!-- Ejercicio 1------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==1" id="ejercicio15">
             <div class="contenedorEjer contenedorFlex ">
                 <div class="bancoIzquierda contenedorFlex itemFlex">
@@ -58,30 +64,48 @@
             </div>
         </div>
 
+    <!-- Ejercicio 2------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==2" id="ejercicio16">
             <div class="contenedorEjer contenedorFlex ">
-
+                <div class="calculadorPrincipal contenedorFlex">
+                    <div class="calculadorPerse contenedorFlex">
+                        <div class="calculadorVisor">
+                            <h1 v-show="calVisorOff" >Calculador-Senpai</h1>
+                            <h1 v-show="calVisorOn" >{{calVisor}}</h1>
+                            <button v-show="calVisorOn" class="calculadorbtn" @click="calClear" >Clear</button>
+                        </div>
+                        <div class="calculadorcontroles contenedorFlex">
+                            <input v-model="calOperar" class="cien" type="text" placeholder="Ingrese número a operar">
+                            <button class="calculadorbtn" @click="calExp" >n <b><sup>2</sup></b></button>
+                            <button class="calculadorbtn" @click="calRaiz" :disabled="caldisableNeg">√ n</button>
+                            <button class="calculadorbtn" @click="calFact" :disabled="caldisableNeg">n !</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+    <!-- Ejercicio 3------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==3" id="ejercicio17">
             <div class="contenedorEjer contenedorFlex ">
-
             </div>
         </div>
 
+    <!-- Ejercicio 4------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==4" id="ejercicio18">
             <div class="contenedorEjer contenedorFlex ">
 
             </div>
-        </div>
-
+        </div>    
+        
+        <!-- Ejercicio 5------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==5" id="ejercicio19">
             <div class="contenedorEjer contenedorFlex ">
 
             </div>
         </div>
 
+        <!-- Ejercicio 6------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==6" id="ejercicio20">
             <div class="contenedorEjer contenedorFlex ">
 
