@@ -67,6 +67,30 @@ body{
         border-color:   #f66 #fa0 #ffaa0066 #fa0  ;    
     }
 }
+.inicio {
+    height: 100%;
+    width: 100%;
+    background-color: #000000dd;
+    border-radius: 30px;
+    color: #fff;
+    flex-direction: column;   
+}
+.inicio p{
+    text-align: center;
+    font-size: 2em;
+    animation: parpadear 1.5s linear infinite;
+}
+@keyframes parpadear{
+    0%{
+        color: #fff;
+    }  
+    50%{
+        color: #777;
+    }  
+    100%{
+        color: #fff;
+    }  
+}
 /* -----------------------Ejercicio 15 cuenta de banco */
 .bancoSaldo{
     height: 20%;

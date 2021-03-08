@@ -20,8 +20,16 @@
         <div class="itemFlex contenedorFlex buscador">
             <input v-model="Exponer" type="range" max="6" min="0" value="1">
         </div>
+        <div class="displayEjercicio" v-show="Exponer==0" id="inicio">
+            <div class="contenedorEjer contenedorFlex ">
+                <div class="inicio contenedorFlex">
+                    <p>↑ ↑ ↑</p>
+                    <p>Mueva la barra de arriba para ver y cambiar entre los ejercicios</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Ejercicio 1------------------------------------ -->
+    <!-- Ejercicio 15-----------listo-------------- -->
         <div class="displayEjercicio" v-show="Exponer==1" id="ejercicio15">
             <div class="contenedorEjer contenedorFlex ">
                 <div class="bancoIzquierda contenedorFlex itemFlex">
@@ -64,7 +72,7 @@
             </div>
         </div>
 
-    <!-- Ejercicio 2------------------------------------ -->
+    <!-- Ejercicio 16-----------listo-------------- -->
         <div class="displayEjercicio" v-show="Exponer==2" id="ejercicio16">
             <div class="contenedorEjer contenedorFlex ">
                 <div class="calculadorPrincipal contenedorFlex">
@@ -85,7 +93,7 @@
             </div>
         </div>
 
-    <!-- Ejercicio 3------------------------------------ -->
+    <!-- Ejercicio 17-----------listo-------------- -->
         <div class="displayEjercicio" v-show="Exponer==3" id="ejercicio17">
             <div class="contenedorEjer contenedorFlex ">
                 
@@ -147,21 +155,21 @@
             </div>
         </div>
 
-    <!-- Ejercicio 4------------------------------------ -->
+    <!-- Ejercicio 18------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==4" id="ejercicio18">
             <div class="contenedorEjer contenedorFlex ">
 
             </div>
         </div>    
         
-        <!-- Ejercicio 5------------------------------------ -->
+    <!-- Ejercicio 19------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==5" id="ejercicio19">
             <div class="contenedorEjer contenedorFlex ">
 
             </div>
         </div>
 
-        <!-- Ejercicio 6------------------------------------ -->
+    <!-- Ejercicio 20------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==6" id="ejercicio20">
             <div class="contenedorEjer contenedorFlex ">
 

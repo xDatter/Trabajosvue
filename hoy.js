@@ -2,8 +2,7 @@
 let vueBasico={
     data(){
         return{ 
-        // Arreglar el exponer antes de subir
-            Exponer:"3",
+            Exponer:"",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
