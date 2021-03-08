@@ -2,7 +2,7 @@
 let vueBasico={
     data(){
         return{ 
-            Exponer:"",
+            Exponer:"4",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
