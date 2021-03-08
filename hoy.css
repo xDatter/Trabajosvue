@@ -15,7 +15,6 @@ body{
 }
 
 .itemFlex{
-    text-align: center;
     flex-grow: 1;
     width: 100%;
 }
@@ -138,7 +137,6 @@ body{
     margin: 0 auto 20px;
     font-size: 1.5em;
     background: linear-gradient(to bottom, #000000aa, #00000033 80%, transparent);
-    /* outline: solid red 1px; */
 }
 .calculadorcontroles{
     opacity: 90%;
@@ -161,6 +159,200 @@ body{
     flex-basis:25%;
     margin: 20px auto;
 }
+
+/* -----------------------Ejercicio 17 Formulario */
+
+.formFondo{
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 50%;
+    width: 100%;
+}
+.fcirculo{
+    z-index: 10;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    justify-content: center;
+    align-content: center;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    animation: pokeball 20s linear infinite;
+}
+@keyframes pokeball{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.fcirculo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-size: 100px 180px;
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #900, transparent);
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+}
+.fcirculo::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-size: 100px 180px;
+    background-repeat: no-repeat;
+    background: linear-gradient(to top, rgb(255, 255, 255), transparent);
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+}
+.fspan1{
+    z-index: 0;
+    position: relative;
+    margin: auto;
+    border-radius: 50%;
+    background: rgb(179, 179, 179);
+    height: 130px;
+    width: 130px;
+}
+.fspan2{
+    z-index: 20;
+    position: relative;
+    margin: auto;
+    border-radius: 50%;
+    background: rgba(153, 153, 153, 0.842);
+    height: 65px;
+    width: 65px;
+}
+.formnegativa{
+    filter: grayscale();
+    opacity: 25%;
+    transition: all 5s
+    ;
+}
+.formularioEjer{
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.8));
+    border-radius: 20px;
+}
+.formularioEjer section{
+    min-height: 50px;
+    max-height: 30%;
+    margin-bottom: auto;
+    
+}
+.formHolder{
+    position: relative;
+    min-height: 50vhvh;
+}
+.formVisor{
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.formopciones{
+    flex-grow: 1;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+.formopciones label{
+    flex-basis: 200px;
+    background: #000000cc;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    margin: 10px;
+}
+.formopciones label:hover{
+    color: #fd1;
+}
+.formopciones label:active{
+    color: #fd1;
+    background: #000000ff;
+}
+
+.formTextos{
+    flex-wrap: wrap;
+    top: 600px;
+    flex-grow: 4;
+    height: 100%;
+    width: 100%;
+}
+.formAreas{
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    min-height: 30vh;
+    max-width: 49%;
+    margin: auto;
+
+}
+.formAreas p{
+    min-height: 50%;
+    margin: 10px auto;
+    width: 40vw;
+    text-align: center;
+    justify-self: center;
+    align-self: center;  
+    font-weight: bold;  
+   
+}
+.formAreas textarea{
+    max-height: 20vh;
+    min-height: 20vh;
+    min-width: 100%;
+    max-width: 340px;
+    margin: auto auto 0;
+    padding: 20px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+.formImgCont{
+    width: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+.formBanner{
+    width: 100%;
+    position: relative;
+    top: -60px;
+}
+
+.formSubmit {
+    min-width: 40%;
+    margin: 50px auto;
+    z-index: 50;
+    border-radius: 20px;
+    box-shadow: black 3px 3px 3px;
+    font-weight: bolder;
+    
+}
+    
+
 
 
 

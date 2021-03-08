@@ -7,8 +7,8 @@
     <title>Practicando con vue en github</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="hoy.css">
-    <link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="hoy.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="hoy.js"></script>
 
@@ -88,6 +88,59 @@
     <!-- Ejercicio 3------------------------------------ -->
         <div class="displayEjercicio" v-show="Exponer==3" id="ejercicio17">
             <div class="contenedorEjer contenedorFlex ">
+                
+                <div class="formFondo">
+                    <div class="ffondo1 fcirculo " ><span class="fspan1"></span></div>
+                    <div class="ffondo2 fcirculo " ><span class="fspan2"></span></div>
+                </div>
+                
+                <div class="formularioEjer contenedorFlex" >
+                    <section class="formVisor">
+                        <h1>¿Te gusta pokemon?</h1>
+                        <div class="formopciones contenedorFlex">
+                            <label for="formSi">
+                                <div>
+                                    <input id="formSi" v-model="formPregunta1" hidden="true" type="radio"  name="formpregunta1" value="1">
+                                    <p>Sí, sí me gusta!</p>        
+                                </div>
+                            </label>
+
+                            <label for="formNo">
+                                <div>
+                                    <input id="formNo" v-model="formPregunta1" hidden="true" type="radio"  name="formpregunta1" value="2">
+                                    <p>No, que paja</p>        
+                                </div>
+                            </label>
+                        </div>
+                    </section>
+                   
+                    <section v-show="formPregunta1==0" class="formHolder">
+                            <div class="formBanner">   
+                                <img src="recursos/banner.jpg" alt="">
+                            </div>                    
+                        </section>
+                    <section v-show="formPregunta1==1" class="formHolder contenedorFlex">
+                        <form class="formTextos contenedorFlex" id="formform">
+                            <div class="contenedorFlex formAreas">
+                                <p>¿Cuál es tu Pokémon favorito?</p>
+                                <textarea v-model="formTextoVacio1" placeholder="Escriba aquí su respuesta" name="" id="formPKMFav" cols="10" rows="10"></textarea>
+                            </div>
+                            <div class="contenedorFlex formAreas">
+                                <p>¿Qué es lo que más te gusta de tu Pokémon favorito?</p>
+                                <textarea v-model="formTextoVacio2" placeholder="Escriba aquí su respuesta" name="" id="formPKMRazon" cols="10" rows="10"></textarea>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section v-show="formPregunta1==2" class="formHolder">
+                        <div class="formImgCont contenedorFlex">
+                            <img src="recursos/frno.gif" alt="">
+                        </div>
+                    </section>
+
+                    <input v-show="formPregunta1==1" class="formSubmit" type="submit" form="formform" :disabled="formdisableIncom">                        
+                    <input v-show="formPregunta1==2" class="formSubmit" type="submit" form="formform" value="Regresar" >                        
+                </div>
             </div>
         </div>
 

@@ -3,7 +3,7 @@ let vueBasico={
     data(){
         return{ 
         // Arreglar el exponer antes de subir
-            Exponer:"2",
+            Exponer:"3",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
@@ -15,7 +15,11 @@ let vueBasico={
     // Ejer 16------------------------------------
             calVisor:"",
             calOperar:"",
-
+    // Ejer 17------------------------------------
+            formPregunta1:"",
+            formTextoVacio1:"",
+            formTextoVacio2:"",
+            formIncompleto:"",
 
 
 
@@ -117,7 +121,7 @@ let vueBasico={
 
 
         },
-
+        // Ejer 17------------------------------------
 
 
 
@@ -153,6 +157,14 @@ let vueBasico={
         },
         caldisableNeg(){
             return this.calOperar<0? true:false;
-        }
+        },
+        // Ejer 17------------------------------------
+        formdisableIncom(){
+            return (this.formTextoVacio1==""| this.formTextoVacio2=="")? true:false;
+        },
+
+
+
+
     }
 }
