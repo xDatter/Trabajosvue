@@ -17,6 +17,7 @@ body{
 .itemFlex{
     flex-grow: 1;
     width: 100%;
+    text-align: center;
 }
 
 .buscador{
@@ -183,6 +184,8 @@ body{
     width: 190px;
     border-radius: 50%;
     animation: pokeball 20s linear infinite;
+    transition: all 5s
+
 }
 @keyframes pokeball{
     0%{
@@ -239,9 +242,9 @@ body{
 .formnegativa{
     filter: grayscale();
     opacity: 25%;
-    transition: all 5s
-    ;
+    transition: all 5s;
 }
+
 .formularioEjer{
     position: relative;
     flex-direction: column;
@@ -331,10 +334,21 @@ body{
     border: solid 1px black;
     border-radius: 5px;
 }
+.formAlert{
+    z-index: 50;
+    top: 120px;
+    position: absolute;
+    font-size: 15px;
+    color: #aa0000bb;
+
+}
+
 .formImgCont{
     width: 400px;
     overflow: hidden;
     margin: auto;
+    border-radius: 20px;
+    border: #fd0 ridge 5px;
 }
 .formBanner{
     width: 100%;
@@ -344,12 +358,11 @@ body{
 
 .formSubmit {
     min-width: 40%;
-    margin: 50px auto;
+    margin: 10px auto;
     z-index: 50;
     border-radius: 20px;
     box-shadow: black 3px 3px 3px;
     font-weight: bolder;
-    
 }
     
 

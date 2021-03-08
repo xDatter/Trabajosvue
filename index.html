@@ -90,8 +90,8 @@
             <div class="contenedorEjer contenedorFlex ">
                 
                 <div class="formFondo">
-                    <div class="ffondo1 fcirculo " ><span class="fspan1"></span></div>
-                    <div class="ffondo2 fcirculo " ><span class="fspan2"></span></div>
+                    <div class="ffondo1 " :class="formResNo" ><span class="fspan1"></span></div>
+                    <div class="ffondo2 " :class="formResNo" ><span class="fspan2"></span></div>
                 </div>
                 
                 <div class="formularioEjer contenedorFlex" >
@@ -123,22 +123,25 @@
                         <form class="formTextos contenedorFlex" id="formform">
                             <div class="contenedorFlex formAreas">
                                 <p>¿Cuál es tu Pokémon favorito?</p>
-                                <textarea v-model="formTextoVacio1" placeholder="Escriba aquí su respuesta" name="" id="formPKMFav" cols="10" rows="10"></textarea>
+                                <textarea v-model="formTextoVacio1" placeholder="Escriba aquí su respuesta" name="" id="formPKMFav" cols="10" rows="10" :disabled="formBloquearText"></textarea>
                             </div>
                             <div class="contenedorFlex formAreas">
-                                <p>¿Qué es lo que más te gusta de tu Pokémon favorito?</p>
-                                <textarea v-model="formTextoVacio2" placeholder="Escriba aquí su respuesta" name="" id="formPKMRazon" cols="10" rows="10"></textarea>
+                                <p> ¿Qué es lo que más te gusta de tu Pokémon favorito?</p>
+                                <textarea v-model="formTextoVacio2" placeholder="Escriba aquí su respuesta" name="" id="formPKMRazon" cols="10" rows="10" :disabled="formBloquearText"></textarea>
+                                <p class="formAlert" v-if="formtext20"> Este campo debe contener al menos {{20-(formTextoVacio2.length)}} caracteres más</p>
+                                <p class="formAlert" v-if="formtext100"> Superaste el límite de caracteres en {{(formTextoVacio2.length)-100}} </p>
                             </div>
+                            <input type="button" @click="formRevisarError"  class="formSubmit" :class="formErrorEstilo" value="Estoy absolutamente seguro de mis respuestas!">    
                         </form>
                     </section>
 
-                    <section v-show="formPregunta1==2" class="formHolder">
+                    <section v-show="formPregunta1==2" class="">
                         <div class="formImgCont contenedorFlex">
                             <img src="recursos/frno.gif" alt="">
                         </div>
                     </section>
 
-                    <input v-show="formPregunta1==1" class="formSubmit" type="submit" form="formform" :disabled="formdisableIncom">                        
+                    <input v-show="formPregunta1==1" class="formSubmit" type="submit" form="formform" :disabled="formValidar">                        
                     <input v-show="formPregunta1==2" class="formSubmit" type="submit" form="formform" value="Regresar" >                        
                 </div>
             </div>

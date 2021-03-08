@@ -19,7 +19,8 @@ let vueBasico={
             formPregunta1:"",
             formTextoVacio1:"",
             formTextoVacio2:"",
-            formIncompleto:"",
+            formIncompleto:1,
+            formBloquearText:false,
 
 
 
@@ -122,7 +123,20 @@ let vueBasico={
 
         },
         // Ejer 17------------------------------------
-
+        formRevisarError(valor1,valor2){
+            valor1=this.formTextoVacio1;
+            valor2=this.formTextoVacio2;
+            if (valor1.length==0) {
+                this.formIncompleto=1;
+                return;
+            }
+            if (valor2.length<20 || valor2.length>100 ){
+                this.formIncompleto=1;
+                return;
+            }
+            this.formIncompleto=0;
+            this.formBloquearText=true;
+        }
 
 
 
@@ -159,10 +173,21 @@ let vueBasico={
             return this.calOperar<0? true:false;
         },
         // Ejer 17------------------------------------
-        formdisableIncom(){
-            return (this.formTextoVacio1==""| this.formTextoVacio2=="")? true:false;
+        formtext20(){
+            return this.formTextoVacio2.length<20? true:false;
         },
-
+        formtext100(){
+            return this.formTextoVacio2.length<=100? false:true;
+        },
+        formValidar(){
+            return this.formIncompleto==1? true:false;
+        },
+        formErrorEstilo(){
+            return this.formIncompleto==1? "bgRo":"bgVe";
+        },
+        formResNo(){
+            return (this.formPregunta1==1)? "fcirculo ":"fcirculo formnegativa";
+        }
 
 
 
