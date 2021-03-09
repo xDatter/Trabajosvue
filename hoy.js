@@ -2,7 +2,7 @@
 let vueBasico={
     data(){
         return{ 
-            Exponer:"0",
+            Exponer:"4",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
@@ -15,13 +15,14 @@ let vueBasico={
             calVisor:"",
             calOperar:"",
     // Ejer 17------------------------------------
-            formPregunta1:"",
-            formTextoVacio1:"",
-            formTextoVacio2:"",
-            formIncompleto:1,
-            formBloquearText:false,
-
-
+        formPregunta1:"",
+        formTextoVacio1:"",
+        formTextoVacio2:"",
+        formIncompleto:1,
+        formBloquearText:false,
+    // Ejer 18------------------------------------
+        menuClass1:"",
+        menuClass2:"",
 
 
 
@@ -135,9 +136,18 @@ let vueBasico={
             }
             this.formIncompleto=0;
             this.formBloquearText=true;
-        }
-
-
+        },
+        // Ejer 18------------------------------------
+        menuCambioClase1(){
+            if (this.menuClass1=="menuActivo1"){
+                this.menuClass1=""
+                this.menuClass2=""
+            }
+            else{
+                this.menuClass1="menuActivo1"
+                this.menuClass2="menuActivo2"
+            }
+        },
 
 
 
@@ -186,7 +196,8 @@ let vueBasico={
         },
         formResNo(){
             return (this.formPregunta1==1)? "fcirculo ":"fcirculo formnegativa";
-        }
+        },
+        // Ejer 18------------------------------------
 
 
 
