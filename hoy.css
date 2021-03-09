@@ -509,10 +509,20 @@ body{
     right: 0;
     overflow: hidden;
 }
+.menuDesplegar p
+{
+    position: absolute;
+    top: 0;
+    font-weight: bolder;
+}
+.menuDesplegar.menuActivo1 p
+{
+    display: none;
+}    
 
 .menuDesplegar::before
 {
-    content: "Menu";
+    content: "";
     padding: 5px;
     color: #000;
     font-size: 20px;
@@ -540,6 +550,8 @@ body{
 
 }
 
+
+/* ------------------- */
 
 /* este es el navigator */
 .menuActivo2
