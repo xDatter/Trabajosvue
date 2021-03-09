@@ -15,15 +15,22 @@ let vueBasico={
             calVisor:"",
             calOperar:"",
     // Ejer 17------------------------------------
-        formPregunta1:"",
-        formTextoVacio1:"",
-        formTextoVacio2:"",
-        formIncompleto:1,
-        formBloquearText:false,
+            formPregunta1:"",
+            formTextoVacio1:"",
+            formTextoVacio2:"",
+            formIncompleto:1,
+            formBloquearText:false,
     // Ejer 18------------------------------------
-        menuClass1:"",
-        menuClass2:"",
+            menu1AgregarClassActivo1:false,
+            menu1AgregarClassActivo2:false,
 
+            menu2AgregarClassActivo1:false,
+            menu2AgregarClassActivo2:false,
+           
+            menu3AgregarClassActivo1:false,
+            menu3AgregarClassActivo2:false,
+
+            menuNuevaLinea:1,
 
 
         }
@@ -138,17 +145,58 @@ let vueBasico={
             this.formBloquearText=true;
         },
         // Ejer 18------------------------------------
-        menuCambioClase1(){
-            if (this.menuClass1=="menuActivo1"){
-                this.menuClass1=""
-                this.menuClass2=""
+        menuActivar1(){
+            if(this.menu1AgregarClassActivo1==false){
+
+                this.menu1AgregarClassActivo1=true;
+                this.menu1AgregarClassActivo2=true;
+
+                this.menu2AgregarClassActivo1=false;
+                this.menu2AgregarClassActivo2=false;
+
+                this.menu3AgregarClassActivo1=false;
+                this.menu3AgregarClassActivo2=false;
             }
             else{
-                this.menuClass1="menuActivo1"
-                this.menuClass2="menuActivo2"
+                this.menu1AgregarClassActivo1=false;
+                this.menu1AgregarClassActivo2=false;
             }
         },
 
+        menuActivar2(){
+            if(this.menu2AgregarClassActivo1==false){
+
+                this.menu2AgregarClassActivo1=true;
+                this.menu2AgregarClassActivo2=true;
+
+                this.menu1AgregarClassActivo1=false;
+                this.menu1AgregarClassActivo2=false;
+
+                this.menu3AgregarClassActivo1=false;
+                this.menu3AgregarClassActivo2=false;
+            }
+            else{
+                this.menu2AgregarClassActivo1=false;
+                this.menu2AgregarClassActivo2=false;
+            }
+        },
+        menuActivar3(){
+            if(this.menu3AgregarClassActivo1==false){
+
+                this.menu3AgregarClassActivo1=true;
+                this.menu3AgregarClassActivo2=true;
+
+                this.menu2AgregarClassActivo1=false;
+                this.menu2AgregarClassActivo2=false;
+                
+                this.menu1AgregarClassActivo1=false;
+                this.menu1AgregarClassActivo2=false;
+            }
+            else{
+                this.menu3AgregarClassActivo1=false;
+                this.menu3AgregarClassActivo2=false;
+            }
+        },
 
 
 
@@ -198,7 +246,24 @@ let vueBasico={
             return (this.formPregunta1==1)? "fcirculo ":"fcirculo formnegativa";
         },
         // Ejer 18------------------------------------
-
+        menu1ActivarClass1(){
+            return this.menu1AgregarClassActivo1==true? "menuActivo2":"";
+        },
+        menu1ActivarClass2(){
+            return this.menu1AgregarClassActivo2==true? "menuActivo1":"";
+        },
+        menu2ActivarClass1(){
+            return this.menu2AgregarClassActivo1==true? "menuActivo2":"";
+        },
+        menu2ActivarClass2(){
+            return this.menu2AgregarClassActivo2==true? "menuActivo1":"";
+        },
+        menu3ActivarClass1(){
+            return this.menu3AgregarClassActivo1==true? "menuActivo2":"";
+        },
+        menu3ActivarClass2(){
+            return this.menu3AgregarClassActivo2==true? "menuActivo1":"";
+        },
 
 
     }

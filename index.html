@@ -22,15 +22,15 @@
     <!-- inicio de seccion buscador y ejercicios -->
 
         <div class="itemFlex contenedorFlex buscador">
-            <input v-model="Exponer" type="range" max="6" min="0" value="1">
+            <input v-model="Exponer" type="range" max="6" min="0" >
         </div>
         <div class="displayEjercicio" v-show="Exponer==0" id="inicio">
             <div class="contenedorEjer contenedorFlex ">
                 <div class="inicio contenedorFlex">
                     <p>↑ ↑ ↑</p>
                     <p>Mueva la barra de arriba para ver y cambiar entre los ejercicios</p>
+                    <li>v09-0321-1920</li>
                     <li>v08-0321-2230</li>
-                    <li>v08-0321-1950</li>
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@
                         </form>
                     </section>
 
-                    <section v-show="formPregunta1==2" class="">
+                    <section v-show="formPregunta1==2" class="formHolder contenedorFlex">
                         <div class="formImgCont contenedorFlex">
                             <img src="recursos/frno.gif" alt="">
                         </div>
@@ -167,7 +167,7 @@
                 <div class="menuCuerpo contenedorFlex">
                     <div class="menuSecciones contenedorFlex">
                         <section class="menuSeccion1"> 
-                            <nav class="menuNavigator" :class="menuClass2">
+                            <nav class="menuNavigator" id="menu1"  :class="menu1ActivarClass1">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -199,10 +199,84 @@
                                 <!-- <i class="fa fa-folder" aria-hidden="true"></i> -->
                                 <!-- <i class="fa fa-music" aria-hidden="true"></i> -->
 
-                                <div class="menuDesplegar1" @click="menuCambioClase1" :class="menuClass1">
+                                <div class="menuDesplegar" @click="menuActivar1" :class="menu1ActivarClass2">
     
                                 </div>
                             </nav>
+                            <nav class="menuNavigator" id="menu1"  :class="menu2ActivarClass1">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-home" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-music" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-download" aria-hidden="true"></i></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-usd" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-cogs" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-folder" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-music" aria-hidden="true"></i> -->
+
+                                <div class="menuDesplegar" @click="menuActivar2" :class="menu2ActivarClass2">
+    
+                                </div>
+                            </nav>
+
+                            <nav class="menuNavigator" id="menu1"  :class="menu3ActivarClass1">
+                                <ul>
+                                    <li :style="menuNuevaLinea+1">
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-home" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 1</span>
+                                        </a>
+                                    </li>
+                                    <li :style="menuNuevaLinea+1">
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-music" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 2</span>
+                                        </a>
+                                    </li>
+                                    <li :style="menuNuevaLinea+1">
+                                        <a href="#">
+                                            <span class="menuIcon"><i class="fa fa-download" aria-hidden="true"></i></i>
+                                            </span>
+                                            <span class="menuTitulo">Submenu 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-usd" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-cogs" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-folder" aria-hidden="true"></i> -->
+                                <!-- <i class="fa fa-music" aria-hidden="true"></i> -->
+
+                                <div class="menuDesplegar" @click="menuActivar3" :class="menu3ActivarClass2">
+    
+                                </div>
+                            </nav>
+
                         </section>
 
                         <section class="menuSeccion2">

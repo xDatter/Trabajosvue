@@ -389,32 +389,50 @@ body{
     font-weight: bolder;
 }
 /* -----------------------Ejercicio 18 Menu dinámico */
-.menuCuerpo{
+.menuCuerpo
+{
     height: 100%;
     width: 100%;
 }
-.menuSecciones{
+.menuSecciones
+{
     position: relative;
-    height: 89vh;
     display: flex;
     flex-wrap: wrap;
-    outline: red solid 2px;
+    height: 89vh;
+    width: 100%;
+    outline: rgb(0, 255, 76) solid 2px;
 }
-.menuSeccion1 .menuSeccion2{
-    position: relative;
-    width: 300px;
+.menuSeccion1
+{
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    width: 100%;
     height: 100%;
     background: #fff;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: #000 2px 0px 10px;
-    margin: 10px auto;
+    z-index: 5;
     transition: 0.5s;
 }
-.menuNavigator{
+.menuSeccion2
+{
+    position: absolute;
+    background-color: black;
+    width: 300px;
+    height: 100%;
+    right: 0;
+
+}
+.menuNavigator
+{
     position: relative;
-    width: 150px;
-    min-height: 200px;
+    width: 300px;
+    height: 50px;
     background: #ffbb00;
     border-radius: 5px;
     overflow: hidden;
@@ -422,30 +440,31 @@ body{
     margin: 10px auto;
     transition: 0.5s;
 }
-.menuNavigator.menuActivo2{
-    width: 300px;
-    background: #fff;
 
-}
 
-.menuNavigator ul{
+.menuNavigator ul
+{
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0;
     padding-left: 20px;
     width: 100%;
 }
-.menuNavigator ul li{
+.menuNavigator ul li
+{
     position: relative;
     list-style: none;
     width: 100%;
     transition: 0.2s;
 }
-.menuNavigator ul li:hover{
+.menuNavigator ul li:hover
+{
     background: #fffad2fd;
 }
 
-.menuNavigator ul li a{
+.menuNavigator ul li a
+{
     position: relative;
     display: flex;
     width: 100%;
@@ -453,7 +472,8 @@ body{
     color: #a41;
     font-weight: 500;
 }
-.menuNavigator ul li a .menuIcon{
+.menuNavigator ul li a .menuIcon
+{
     position: relative;
     display: block;
     min-width: 80px;
@@ -461,64 +481,75 @@ body{
     line-height: 60px;
     text-align: center;
 }
-.menuNavigator ul li a .menuIcon .fa{
+.menuNavigator ul li a .menuIcon .fa
+{
     font-size: 24px;
 }
-.menuNavigator ul li a .menuTitulo{
+.menuNavigator ul li a .menuTitulo
+{
     position: relative;
     display: block;
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
 }
-.menuDesplegar1{
+
+/* respecto al navigator */
+.menuDesplegar
+{
     position: absolute;
-    top: 0;
-    right: -20px;
-    /* width: 80px;
-    height: 40px; */
     width: 100%;
-    height: 100%;
+    height: 50px;
     background: #ffffff;
     cursor: pointer;
     border: #000 solid 1px;
+    bottom: 0;
+    left: 20px;
     transition: .5s;
-    
-}
-.menuActivo1{
-    width: 40px;
-    border-radius: 50%;
-    background: #c40808;
-    border: #000 solid 5px;
-    width: 40px;
-    height: 40px;
-    top: calc(50% - 20px);
-}
-.menuActivo1:hover{
-    background: #ffbb00;
-
+    padding: 5px;
+    overflow: hidden;
 }
 
-.menuDesplegar1::before{
+.menuDesplegar::before
+{
     content: "Menu";
-    padding-left: 5px;
+    padding: 5px;
     color: #000;
     font-size: 20px;
     font-weight: bold;
-
-}
-.menuActivo1::before{
-    content:":::::";
-    padding-left: 0px;
-    color: #000;
-    font-size: 20px;
-    font-weight: normal;
-
-
-
 }
 
+/* este es la menuDesplegar */
+.menuActivo1
+{
+    width: 60px;
+    height: 60px;
+    background: #f00;
+    border: #000 solid 5px;
+    border-radius: 50%;
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+.menuActivo1::before
+{   
+    content: ":::::::::::::::";
+    width: 40px;
+    height: 40px;
+}
+.menuActivo1:hover
+{
+    background: #fa0;
 
+}
+
+
+/* este es el navigator */
+.menuActivo2
+{
+    background: #ddd;
+    height: calc(50%);
+
+}
 
 
 
