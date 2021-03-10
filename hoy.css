@@ -432,19 +432,21 @@ body{
     transition: 1s;
 
 }
-.menuSeccion2 span::before
+.menuSeccion2 .menuBotonAgregar::before
 {
-    content: " ::";
+    content: "::: Add";
+    padding-left: 5px;
     font-size: 20px;
     font-weight: bold;
     position: absolute;
     background: red;
+    color: #fff;
     border: #fff double 10px;
-    width: 60px;
+    width: 100px;
     height: 60px;
     top: calc(50% - 30px);
     right: -20px;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -546,7 +548,10 @@ body{
 {
     display: none;
 }    
-
+.menuDesplegar:hover
+{
+    background: #ffe8ba;
+}
 .menuDesplegar::before
 {
     content: "";

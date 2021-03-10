@@ -2,7 +2,7 @@
 let vueBasico={
     data(){
         return{ 
-            Exponer:"0",
+            Exponer:"4",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
@@ -292,3 +292,13 @@ let vueBasico={
 // aparentemente selecciona el nodo con la id que escribamos
 // elemento con id="hola" - data(){ hola:""}
 // (this.hola) alude al vue y (hola) solo, alude al nodo.
+
+// methods: {
+//     warn: function (message, event) {
+//     // now we have access to the native event
+//     if (event) {
+//     event.preventDefault()
+//     }
+//     alert(message)
+//     }
+//     }
