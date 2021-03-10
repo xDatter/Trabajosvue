@@ -2,7 +2,7 @@
 let vueBasico={
     data(){
         return{ 
-            Exponer:"4",
+            Exponer:"0",
     // Ejer 15------------------------------------
             bancoSaldo:0,
             bancoCredito:1000,
@@ -30,7 +30,9 @@ let vueBasico={
             menu3AgregarClassActivo1:false,
             menu3AgregarClassActivo2:false,
 
-            menuNuevaLinea:1,
+            menuSeccionActiva:false,
+
+            menuContador:1,
 
 
         }
@@ -145,6 +147,14 @@ let vueBasico={
             this.formBloquearText=true;
         },
         // Ejer 18------------------------------------
+        menuActivar0(){
+            if(this.menuSeccionActiva==false){
+                this.menuSeccionActiva=true;
+            }
+            else{
+                this.menuSeccionActiva=false;
+            }
+        },
         menuActivar1(){
             if(this.menu1AgregarClassActivo1==false){
 
@@ -263,6 +273,9 @@ let vueBasico={
         },
         menu3ActivarClass2(){
             return this.menu3AgregarClassActivo2==true? "menuActivo1":"";
+        },
+        menuSeccion(){
+            return this.menuSeccionActiva==true? "menuActive":"";
         },
 
 

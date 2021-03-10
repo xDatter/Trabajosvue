@@ -408,9 +408,10 @@ body{
     position: absolute;
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: start;
+    left: 0;
     
-    width: 100%;
+    width: 99%;
     height: 100%;
     background: #fff;
     border-radius: 5px;
@@ -422,12 +423,21 @@ body{
 .menuSeccion2
 {
     position: absolute;
-    background-color: black;
-    width: 300px;
+    background-color: rgb(139, 0, 93);
+    width:  1%;
     height: 100%;
     right: 0;
+    z-index:10;
+    transition: 1s;
 
 }
+.menuSeccion2.menuActive
+{
+    width:  400px;
+    z-index:100;
+
+}
+
 .menuNavigator
 {
     position: relative;
@@ -437,7 +447,7 @@ body{
     border-radius: 5px;
     overflow: hidden;
     box-shadow: #000 2px 0px 10px;
-    margin: 10px auto;
+    margin: 10px 5px;
     transition: 0.5s;
 }
 
@@ -542,7 +552,7 @@ body{
 }
 .menuActivo1::before
 {   
-    content: ":::::::::::::::";
+    content: ":::";
 }
 .menuActivo1:hover
 {
