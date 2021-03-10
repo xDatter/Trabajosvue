@@ -281,3 +281,14 @@ let vueBasico={
 
     }
 }
+
+
+
+
+// qué aprendimos??
+
+
+// Cuando no se pone el this. en el vue en methodos o computed.. 
+// aparentemente selecciona el nodo con la id que escribamos
+// elemento con id="hola" - data(){ hola:""}
+// (this.hola) alude al vue y (hola) solo, alude al nodo.

@@ -402,6 +402,7 @@ body{
     height: 89vh;
     width: 100%;
     outline: rgb(0, 255, 76) solid 2px;
+    overflow: hidden;
 }
 .menuSeccion1
 {
@@ -431,6 +432,22 @@ body{
     transition: 1s;
 
 }
+.menuSeccion2 span::before
+{
+    content: " ::";
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    background: red;
+    border: #fff double 10px;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    right: -20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .menuSeccion2.menuActive
 {
     width:  400px;
