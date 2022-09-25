@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "consulta": "En la pelicula Tierra de Osos ¿Cómo se llama el hermano mayor del protagonista?",
+        "respuesta": "Sitka", 
+        "distractores": ["Koda","Denahi","Kenai"],
+        "justificado":"Sitka es el hermano mayor de Denahi y Kenai. Siempre guiando a sus hermanos, aún desde el más allá"
+    },
+    {
+        "id": "2",
+        "consulta": "En la película Red ¿Cuándo se debía realizar el ritual?",
+        "respuesta": "Durante la luna roja", 
+        "distractores": ["Durante el solsticio de invierno","Durante el solsticio de verano","Durante la caida de una estrella"],
+        "justificado":"El ritual para expulsar al panda rojo se debía realizar durante la luna roja, y así poder sellarlo"
+    },
+    {
+        "id": "3",
+        "consulta": "Según la serie WandaVisión ¿Cuál fue el motivo de la creación de aquel universo paralelo?",
+        "respuesta": "El sufrimiento", 
+        "distractores": ["La felicidad","El odio","La pasión"],
+        "justificado":"El universo de WandaVisión se origina del sufrimiento de Wanda al perder al amor de su vida, por lo que crea esta ilusión en donde puede vivir feliz"
+    },
+    {
+        "id": "4",
+        "consulta": "En la película Encanto ¿Quién canta el tema 'Dos oruguitas'?",
+        "respuesta": "Sebastián Yatra", 
+        "distractores": ["Carlos Vives","Álex Ubago","Shakira"],
+        "justificado":"Si bien no es el estilo musical de Sebastián Yatra, este mismo declaró haber cumplido un sueño al tener la oportunidad de interpretar una canción para Disney"
+    },
+    {
+        "id": "5",
+        "consulta": "Según la serie Gravity Falls ¿Quién es Bill?",
+        "respuesta": "Un ser de energía pura", 
+        "distractores": ["El cerdito","El técnico","El fantasma de la mansión Noroeste"],
+        "justificado":"Bill  es un ser de energía pura de otra dimensión, siendo además el principal villano de la historia"
+    },
+    {
+        "id": "6",
+        "consulta": "En la primera película animada de Mulan ¿Cuál de estos personajes siempre la vió como un guerrero?",
+        "respuesta": "Shan Yu - Lider Huno", 
+        "distractores": ["Li Shang - Capitán","Su padre","Su abuela"],
+        "justificado":"En China, la labor u opinión las mujeres es menospreciado y, por ende, discriminado. Durante la película Shan Yu fue el único que reconoció en todo momento a Mulan como rival sin importar su género"
+    },
+    {
+        "id": "7",
+        "consulta": "Cuál es uno de los mensajes de la película 'Ralph El Demoledor'",
+        "respuesta": "Hay que aceptarse tal como uno es", 
+        "distractores": ["Cuando rompes algo tienes que admitirlo","Tus enemigos se pueden volver tus amigos","La familia es para siempre"],
+        "justificado":"A lo largo de la película se ve como Ralph va aceptando su rol como el villano de su videojuego, y que eso no es malo. Sin un villano, no habría juego, siendo una parte importante de la vida de los demás"
+    },
+    {
+        "id": "8",
+        "consulta": "De acuerdo a la película 'Coco' ¿Cuál es el destino de la mayoría de las personas?",
+        "respuesta": "Ser olvidados", 
+        "distractores": ["Morir","Vivir","Reencarnar"],
+        "justificado":"Según Hector, todos somos olvidados al final, siendo así el fin definitivo de nuestra alma en cualquier plano existencial"
+    },
+    {
+        "id": "9",
+        "consulta": "Según la película Zootopia ¿Cuál es la diferencia entre Depredadores y Presas?",
+        "respuesta": "Ninguna", 
+        "distractores": ["Un componente biológico","Su instinto","Su tamaño"],
+        "justificado":"Zootopia nos deja ver un reflejo de una sociedad discriminadora, donde todos promulgan igualdad cuando en realidad todos se dejan llevar por los prejuicios. Sin embargo, el trasfondo de la película nos dice que efectivamente, no existe diferencia entre animales, todos pueden ser buenos o malos independientemente de su origen biológico"
+    },
+    {
+        "id": "10",
+        "consulta": "¿Qué nos expone el corto 'Bao'?",
+        "respuesta": "El síndrome del nido vacío", 
+        "distractores": ["La crisis de los 40","El amor joven","El trastorno obsesivo compulsivo"],
+        "justificado":"Bao nos muestra de manera metafórica y radical la forma en como se puede llegar a sentir una persona que sufre del Sindrome de nido vacío. Dejando ver la desesperación de los actos que se pueden cometer"
+    }
+]
