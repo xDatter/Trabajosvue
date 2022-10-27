@@ -1,0 +1,76 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------indiceIndex--------------- */
+
+body
+{
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+#indiceIndex
+{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+ 
+    
+}
+
+#tituloIndex
+{
+    font-size: 40px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #777;
+}
+
+#cursosIndex
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloqueIndex
+{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    flex-grow: 1;
+    outline: red solid 1px;
+}
+
+.divManualIndex
+{
+ width: 50%;
+ height: 200px;
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+}
+
+.divManualIndex img
+{
+    width: 100%;
+}
+
+.btnIndex
+{
+    display: block;
+}
